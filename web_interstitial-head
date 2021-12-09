@@ -1,0 +1,12 @@
+var securepubads = document.createElement("script");
+securepubads.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+securepubads.async = true;
+document.head.appendChild(securepubads);
+
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+googletag.cmd.push(function() {
+    googletag.defineOutOfPageSlot('/7542/web-interstitial', googletag.enums.OutOfPageFormat.INTERSTITIAL).addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+});
